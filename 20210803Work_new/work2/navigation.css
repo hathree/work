@@ -1,0 +1,33 @@
+.main {
+  background-color: lightblue;
+  height: 100vh;
+  display: flex;
+}
+.xmu_logo {
+  flex: 1;
+  text-align: center;
+  margin-top: 10px;
+}
+.nav {
+  display: flex;
+  height: fit-content;
+  flex: 3;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.dropdown {
+  height: fit-content;
+  text-align: center;
+  font-size: 20px;
+  flex: 1;
+}
+
+.dropdown-content {
+  display: none;
+  list-style: none;
+  padding: 0;
+  background: lightsalmon;
+  text-align: center;
+  font-size: 18px;
+}

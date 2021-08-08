@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work 3</title>
+    <link rel="stylesheet" type="text/css" href="./navigation.css" />
+    <script src="./vue.js"></script>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="xmu_logo">
+        <img src="https://www.xmu.edu.cn/images/logo.png" />
+      </div>
+      <div class="nav" id="nav">
+        <div
+          class="dropdown"
+          v-for="item in menu"
+          :key="item.title"
+          @mousemove="selected = item.title"
+          @mouseleave="selected = ''"
+        > <!-- 使用v-for，通常要给每个元素绑定一个唯一的key -->
+          <!-- 将selected用item.title赋值，导航展开的唯一性；不能直接selected='block'，导航会全展开 -->
+          <!-- 一级导航 -->
+          <span>{{item.title}}</span>
+          <!-- 二级导航 -->
+          <ul
+            class="dropdown-content"
+            :style="{display: selected === item.title ? 'block' : 'none'}"
+          >
+            <li v-for="subItem in item.subMenu" :key="subItem.title">
+              {{subItem.title}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var vm = new Vue({
+        el: "#nav",
+        data: {
+          selected: "",
+          menu: [
+            {
+              title: "首页",
+              subMenu: [],
+            },
+            {
+              title: "厦大概览",
+              subMenu: [
+                { title: "学校简介" },
+                { title: "厦门大学章程" },
+                { title: "校主平生" },
+              ],
+            },
+            {
+              title: "学部院系",
+              subMenu: [
+                { title: "人文与艺术学部" },
+                { title: "社会科学学部" },
+                { title: "自然科学学部" },
+              ],
+            },
+            {
+              title: "人才培养",
+              subMenu: [
+                { title: "学科" },
+                { title: "师资" },
+                { title: "本科生教育" },
+              ],
+            },
+            {
+              title: "学术科研",
+              subMenu: [
+                { title: "自然科学与技术" },
+                { title: "人文与社会科学" },
+              ],
+            },
+            {
+              title: "社会服务",
+              subMenu: [{ title: "成果产业化" }, { title: "大学科技园" }],
+            },
+            {
+              title: "大学文化",
+              subMenu: [{ title: "团委" }, { title: "学生委员会" }],
+            },
+            {
+              title: "合作交流",
+              subMenu: [
+                { title: "国际交流与合作" },
+                { title: "港澳台合作与交流" },
+              ],
+            },
+            {
+              title: "招生就业",
+              subMenu: [{ title: "招生" }, { title: "就业" }],
+            },
+            {
+              title: "人才招聘",
+              subMenu: [{ title: "人才招聘网" }, { title: "博士后" }],
+            },
+          ],
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>
