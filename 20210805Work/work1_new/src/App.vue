@@ -30,58 +30,58 @@ export default {
         {
           title: "个人中心",
           icon: "el-icon-user-solid",
-          router: "/",
+          router: "/UserCenter",
           subNavMenu: [
             {
               title: "个人信息",
               icon: "el-icon-user",
-              router: "/",
+              router: "/UserCenter/UserData",
             },
             {
               title: "配置管理",
               icon: "el-icon-setting",
-              router: "/",
+              router: "/UserCenter/Config",
             },
           ],
         },
         {
           title: "用户管理",
           icon: "el-icon-orange",
-          router: "/",
+          router: "/UserManage",
           subNavMenu: [],
         },
         {
           title: "文章管理",
           icon: "el-icon-document",
-          router: "/",
+          router: "/Article",
           subNavMenu: [
             {
               title: "文章列表",
               icon: "el-icon-tickets",
-              router: "/",
+              router: "/Article/List",
             },
             {
               title: "编辑文章",
               icon: "el-icon-edit-outline",
-              router: "/",
+              router: "/Article/Edit",
             },
             {
               title: "文章分类",
               icon: "el-icon-folder-opened",
-              router: "/",
+              router: "/Article/Sort",
             },
           ],
         },
         {
           title: "评论管理",
           icon: "el-icon-s-comment",
-          router: "/",
+          router: "/CommentManage",
           subNavMenu: [],
         },
         {
           title: "示例页面",
           icon: "el-icon-star-off",
-          router: "/",
+          router: "/ExamplePages",
           subNavMenu: [],
         },
       ],
@@ -104,7 +104,7 @@ export default {
 }
 .left-box {
   flex: 1;
-  background-color: aquamarine;
+  background-color: white;
   padding: 10px;
   margin: 10px;
 }
