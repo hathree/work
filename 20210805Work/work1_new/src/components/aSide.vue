@@ -7,7 +7,7 @@
       @click="selected = item.title"
     >
       <span class="navMenuItem">
-        <router-link :to="item.router" tag="span">
+        <router-link :to="item.router" tag="p">
           <i :class="item.icon"></i>
           <span> {{ item.title }}</span> &nbsp;&nbsp;&nbsp;&nbsp;
           <i
@@ -32,7 +32,7 @@
           v-for="subItem in item.subNavMenu"
           :key="subItem.title"
         >
-          <router-link :to="subItem.router" tag="span">
+          <router-link :to="subItem.router" tag="p">
             <i :class="subItem.icon"></i>
             <span> {{ subItem.title }}</span>
           </router-link>
@@ -55,10 +55,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.aSide {
+  margin: 20px;
+  width: 200px;
+}
 ul {
   list-style: none;
 }
+
 .router-link-active {
   text-decoration: none;
   color: red;

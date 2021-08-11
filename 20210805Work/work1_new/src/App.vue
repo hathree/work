@@ -58,7 +58,7 @@ export default {
             {
               title: "文章列表",
               icon: "el-icon-tickets",
-              router: "/Article/List",
+              router: "/getArticle",
             },
             {
               title: "编辑文章",
