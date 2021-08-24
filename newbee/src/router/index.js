@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Blank from "../components/Blank.vue";
+import ContentMain from "../components/ContentMain.vue";
 // import Content from "../components/Content.vue";
 // import Login from "../components/Login.vue";
 
@@ -19,7 +19,7 @@ const routes_list = [
     path: "/login",
     name: "login",
     component: () =>
-      import(/* webpackChunkName: "login" */ "../components/Login.vue"),
+      import(/* webpackChunkName: "login" */ "../views/Login.vue"),
     meta: {
       title: "Login",
       isMenu: false,
@@ -27,7 +27,7 @@ const routes_list = [
   },
   {
     path: "/",
-    component: Blank,
+    component: ContentMain,
     meta: {
       title: "Dashboard",
       isMenu: true,
@@ -38,7 +38,7 @@ const routes_list = [
         name: "introduce",
         component: () =>
           import(
-            /* webpackChunkName: "introduce" */ "../components/Introduce.vue"
+            /* webpackChunkName: "introduce" */ "../views/Introduce.vue"
           ),
         meta: {
           title: "系统介绍",
@@ -50,7 +50,7 @@ const routes_list = [
         name: "dashboard",
         component: () =>
           import(
-            /* webpackChunkName: "dashboard" */ "../components/Dashboard.vue"
+            /* webpackChunkName: "dashboard" */ "../views/Dashboard.vue"
           ),
         meta: {
           title: "Dashboard",
@@ -58,10 +58,10 @@ const routes_list = [
         },
       },
       {
-        path: "add",
+        path: "/add",
         name: "add",
         component: () =>
-          import(/* webpackChunkName: "add" */ "../components/Add.vue"),
+          import(/* webpackChunkName: "add" */ "../views/Add.vue"),
         meta: {
           title: "添加商品",
           icon: "el-icon-plus",
@@ -71,7 +71,7 @@ const routes_list = [
   },
   {
     path: "/",
-    component: Blank,
+    component: ContentMain,
     meta: {
       title: "首页配置",
       isMenu: true,
@@ -81,7 +81,7 @@ const routes_list = [
         path: "/swiper",
         name: "swiper",
         component: () =>
-          import(/* webpackChunkName: "swiper" */ "../components/Swiper.vue"),
+          import(/* webpackChunkName: "swiper" */ "../views/Swiper.vue"),
         meta: {
           title: "轮播图配置",
           icon: "el-icon-picture",
@@ -91,7 +91,7 @@ const routes_list = [
         path: "/hot",
         name: "hot",
         component: () =>
-          import(/* webpackChunkName: "hot" */ "../components/Hot.vue"),
+          import(/* webpackChunkName: "hot" */ "../views/Hot.vue"),
         meta: {
           title: "热销商品配置",
           icon: "el-icon-star-on",
@@ -101,7 +101,7 @@ const routes_list = [
         path: "/new",
         name: "new",
         component: () =>
-          import(/* webpackChunkName: "new" */ "../components/New.vue"),
+          import(/* webpackChunkName: "new" */ "../views/New.vue"),
         meta: {
           title: "新品上线配置",
           icon: "el-icon-sell",
@@ -112,7 +112,7 @@ const routes_list = [
         name: "recommend",
         component: () =>
           import(
-            /* webpackChunkName: "recommend" */ "../components/Recommend.vue"
+            /* webpackChunkName: "recommend" */ "../views/Recommend.vue"
           ),
         meta: {
           title: "为你推荐配置",
@@ -123,7 +123,7 @@ const routes_list = [
   },
   {
     path: "/",
-    component: Blank,
+    component: ContentMain,
     meta: {
       title: "模块管理",
       isMenu: true,
@@ -134,7 +134,7 @@ const routes_list = [
         name: "category",
         component: () =>
           import(
-            /* webpackChunkName: "category" */ "../components/Category.vue"
+            /* webpackChunkName: "category" */ "../views/Category.vue"
           ),
         meta: {
           title: "分类管理",
@@ -145,7 +145,7 @@ const routes_list = [
         path: "/good",
         name: "good",
         component: () =>
-          import(/* webpackChunkName: "good" */ "../components/Good.vue"),
+          import(/* webpackChunkName: "good" */ "../views/Good.vue"),
         meta: {
           title: "商品管理",
           icon: "el-icon-s-goods",
@@ -155,7 +155,7 @@ const routes_list = [
         path: "/guest",
         name: "guest",
         component: () =>
-          import(/* webpackChunkName: "guest" */ "../components/Guest.vue"),
+          import(/* webpackChunkName: "guest" */ "../views/Guest.vue"),
         meta: {
           title: "会员管理",
           icon: "el-icon-user-solid",
@@ -165,7 +165,7 @@ const routes_list = [
         path: "/order",
         name: "order",
         component: () =>
-          import(/* webpackChunkName: "order" */ "../components/Order.vue"),
+          import(/* webpackChunkName: "order" */ "../views/Order.vue"),
         meta: {
           title: "订单管理",
           icon: "el-icon-s-order",
@@ -175,7 +175,7 @@ const routes_list = [
   },
   {
     path: "/",
-    component: Blank,
+    component: ContentMain,
     meta: {
       title: "系统管理",
       isMenu: true,
@@ -185,7 +185,7 @@ const routes_list = [
         path: "/account",
         name: "account",
         component: () =>
-          import(/* webpackChunkName: "account" */ "../components/Account.vue"),
+          import(/* webpackChunkName: "account" */ "../views/Account.vue"),
         meta: {
           title: "修改密码",
           icon: "el-icon-lock",
